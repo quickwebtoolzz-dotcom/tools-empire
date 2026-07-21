@@ -9,24 +9,23 @@
 <body>
     <div class="container">
         <h1>📄 PDF Text Cleaner</h1>
-        <p>Paste messy PDF text here. We will instantly remove weird line breaks and fix the paragraphs.</p>
+        <p>Paste messy PDF text here. We will instantly remove weird line breaks.</p>
         
         <textarea id="inputText" placeholder="Paste your messy PDF text here..."></textarea>
-        
         <button onclick="cleanText()">Clean Text 🧹</button>
-        
         <textarea id="outputText" placeholder="Your clean text will appear here..." readonly></textarea>
-        
         <button id="copyBtn" onclick="copyText()" style="background-color: #28a745; display: none;">Copy to Clipboard 📋</button>
     </div>
 
-    <!-- Dwell-Time Minigame -->
+    <!-- YOUR CUSTOM MINIGAME -->
     <div class="minigame">
-        <p>Brain break! Catch the dot!</p>
-        <div id="game-area">
-            <div id="dot" onclick="catchDot()"></div>
+        <p>Brain break! Stop the blue block exactly inside the green box.</p>
+        <div id="game-container">
+            <div id="target-box"></div>
+            <div id="moving-box"></div>
         </div>
-        <p id="score-text">Score: 0</p>
+        <button id="pause-btn" onclick="toggleGame()">PAUSE</button>
+        <p id="accuracy-text">Accuracy: 0%</p>
     </div>
 
     <script src="script.js"></script>
