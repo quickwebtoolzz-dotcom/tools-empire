@@ -1,0 +1,54 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8; /* Soft academic background */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    margin: 0;
+}
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.05);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    border-top: 5px solid #0056b3; /* Professional Blue */
+}
+h1 { color: #0056b3; font-size: 26px; margin-top: 0; }
+p { color: #666; font-size: 14px; }
+textarea {
+    width: 95%;
+    height: 150px;
+    padding: 15px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: vertical;
+    font-family: inherit;
+}
+textarea:focus { border-color: #0056b3; outline: none; }
+button {
+    margin-top: 15px; margin-bottom: 15px;
+    background-color: #0056b3; color: white;
+    border: none; padding: 12px 25px; font-size: 16px; font-weight: bold;
+    border-radius: 8px; cursor: pointer; transition: 0.2s;
+}
+button:hover { background-color: #004494; }
+
+/* Minigame Styles */
+.minigame { margin-top: 40px; text-align: center; }
+#game-area {
+    width: 300px; height: 150px; background: white; 
+    border: 2px dashed #0056b3; border-radius: 10px;
+    position: relative; overflow: hidden; margin: 0 auto;
+}
+#dot {
+    width: 30px; height: 30px; background: #ff4757;
+    border-radius: 50%; position: absolute; top: 50px; left: 130px;
+    cursor: pointer; transition: 0.2s;
+}
+#score-text { font-weight: bold; color: #0056b3; margin-top: 10px; }
