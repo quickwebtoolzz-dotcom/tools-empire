@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Direct Link & QR Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>💬 WhatsApp Link Maker</h1>
+        <p>Create a direct chat link and QR code instantly. No need to save numbers!</p>
+        
+        <label>Phone Number (with Country Code, e.g., 91 for India)</label>
+        <input type="number" id="phone" placeholder="919876543210">
+        
+        <label>Pre-filled Message (Optional)</label>
+        <input type="text" id="message" placeholder="Hi, I want to buy...">
+        
+        <button onclick="generateLink()">Generate Magic Link ✨</button>
+
+        <div id="result-area" style="display: none;">
+            <p class="success-text">Here is your link!</p>
+            <input type="text" id="final-link" readonly>
+            <img id="qr-code" src="" alt="QR Code">
+        </div>
+    </div>
+
+    <!-- The Dwell-Time Minigame -->
+    <div class="minigame">
+        <p>Bored? Pop the bubble!</p>
+        <button id="pop-btn" onclick="popBubble()">Score: 0</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
