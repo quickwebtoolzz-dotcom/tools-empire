@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free YouTube Thumbnail Downloader HD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔥 YT Thumbnail Grabber</h1>
+        <p>Paste any YouTube video link below to instantly extract the HD thumbnail.</p>
+        
+        <input type="text" id="yt-url" placeholder="https://www.youtube.com/watch?v=...">
+        <button onclick="getThumbnail()">Extract HD Image</button>
+        
+        <div id="result-area" style="display: none;">
+            <img id="thumb-preview" src="" alt="YouTube Thumbnail Preview">
+            <a id="download-btn" href="" target="_blank">Open Image to Save</a>
+        </div>
+    </div>
+
+    <!-- Reaction Time Minigame -->
+    <div class="minigame">
+        <p>Brain break! Click the box the exact millisecond it turns GREEN.</p>
+        <div id="reaction-box" onclick="boxClicked()">Click to Start</div>
+        <p id="reaction-time">Time: 0 ms</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
