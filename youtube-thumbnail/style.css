@@ -1,0 +1,48 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212; /* Dark Mode */
+    color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    margin: 0;
+}
+.container {
+    background: #1e1e1e;
+    padding: 30px;
+    border-radius: 12px;
+    border-top: 5px solid #ff4500; /* Hot Coals Orange/Red */
+    box-shadow: 0px 10px 30px rgba(255, 69, 0, 0.2);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+h1 { color: #ff4500; font-size: 26px; margin-top: 0; }
+p { color: #aaa; font-size: 14px; }
+input {
+    width: 90%; padding: 15px; margin-top: 10px;
+    background-color: #2a2a2a; color: white;
+    border: 1px solid #444; border-radius: 8px; outline: none;
+}
+input:focus { border-color: #ff4500; }
+button, #download-btn {
+    display: inline-block; margin-top: 15px;
+    background: linear-gradient(45deg, #ff4500, #ff8c00); /* Hot Coals Gradient */
+    color: white; border: none; padding: 12px 25px; font-size: 16px; font-weight: bold;
+    border-radius: 8px; cursor: pointer; transition: 0.2s; text-decoration: none; width: 90%;
+}
+button:hover, #download-btn:hover { transform: scale(1.02); box-shadow: 0 0 15px rgba(255,69,0,0.5); }
+
+#result-area { margin-top: 25px; }
+#thumb-preview { width: 100%; border-radius: 8px; border: 2px solid #444; margin-bottom: 15px; }
+
+/* Reaction Minigame Styles */
+.minigame { margin-top: 40px; text-align: center; background: #1e1e1e; padding: 20px; border-radius: 12px; width: 100%; max-width: 400px; border: 1px solid #333;}
+#reaction-box {
+    width: 100%; height: 120px; background: #0056b3; color: white;
+    display: flex; justify-content: center; align-items: center;
+    font-size: 20px; font-weight: bold; border-radius: 8px; cursor: pointer;
+    user-select: none; transition: background 0.1s;
+}
+#reaction-time { font-weight: bold; color: #ff8c00; margin-top: 15px; font-size: 18px;}
