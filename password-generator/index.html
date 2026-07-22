@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Password Generator Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 Cyber-Safe Password</h1>
+        <p>Generate a 100% secure, unhackable password instantly.</p>
+        
+        <div class="password-display">
+            <span id="result">Click Generate...</span>
+        </div>
+        
+        <div class="settings">
+            <label>Length: <span id="length-val">16</span></label>
+            <input type="range" id="length" min="8" max="32" value="16" oninput="updateLength()">
+            
+            <label><input type="checkbox" id="uppercase" checked> Include Uppercase (A-Z)</label>
+            <label><input type="checkbox" id="numbers" checked> Include Numbers (0-9)</label>
+            <label><input type="checkbox" id="symbols" checked> Include Symbols (!@#$)</label>
+        </div>
+
+        <button onclick="generatePassword()">Generate Password</button>
+    </div>
+
+    <!-- The Arcade Minigame you requested! -->
+    <div class="minigame">
+        <p>Brain break! Catch the falling neon balls.</p>
+        <canvas id="gameCanvas" width="350" height="200"></canvas>
+        <p id="score-board">Score: 0</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
