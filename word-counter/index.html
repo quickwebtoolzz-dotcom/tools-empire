@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Word & Reading Time Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>✨ Aurora Word Counter</h1>
+        <p>Type or paste your text below for instant real-time analysis.</p>
+        
+        <div class="stats-grid">
+            <div class="stat-box">
+                <span id="word-count">0</span>
+                <p>Words</p>
+            </div>
+            <div class="stat-box">
+                <span id="char-count">0</span>
+                <p>Characters</p>
+            </div>
+            <div class="stat-box">
+                <span id="read-time">0 min</span>
+                <p>Reading Time</p>
+            </div>
+        </div>
+
+        <textarea id="text-input" placeholder="Start typing here..." oninput="analyzeText()"></textarea>
+    </div>
+
+    <!-- Speed Typing Minigame -->
+    <div class="minigame">
+        <p>Brain break! Type the word below as fast as you can.</p>
+        <h2 id="target-word">ready</h2>
+        <input type="text" id="type-input" placeholder="Type here..." oninput="checkTyping()">
+        <p id="typing-result">Time: 0.00s</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
