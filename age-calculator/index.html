@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exact Age Calculator - Live Time Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>⏳ The Time Matrix</h1>
+        <p>Enter your birth date and time to see exactly how long you have been alive.</p>
+        
+        <label>Select Your Birth Date:</label>
+        <input type="date" id="dob-date">
+        
+        <label>Time of Birth (Optional):</label>
+        <input type="time" id="dob-time" value="00:00">
+        
+        <button onclick="startMatrix()">Calculate My Time</button>
+
+        <div id="result-area" style="display: none;">
+            <div class="time-box">
+                <span id="years">0</span><p>Years</p>
+            </div>
+            <div class="time-box">
+                <span id="months">0</span><p>Months</p>
+            </div>
+            <div class="time-box">
+                <span id="days">0</span><p>Days</p>
+            </div>
+            <div class="time-box">
+                <span id="hours">0</span><p>Hours</p>
+            </div>
+            <div class="time-box">
+                <span id="minutes">0</span><p>Minutes</p>
+            </div>
+            <div class="time-box highlight">
+                <span id="seconds">0</span><p>Seconds</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
