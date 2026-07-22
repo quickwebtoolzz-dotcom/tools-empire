@@ -1,0 +1,52 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #020c1b; /* Deep Night Blue */
+    color: #e6f1ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    margin: 0;
+}
+.container {
+    background: #0a192f;
+    padding: 30px;
+    border-radius: 15px;
+    border-top: 5px solid #64ffda; /* Aurora Neon Green */
+    box-shadow: 0px 10px 30px rgba(100, 255, 218, 0.1);
+    text-align: center;
+    max-width: 700px;
+    width: 100%;
+}
+h1 { color: #64ffda; font-size: 28px; margin-top: 0; }
+p { color: #8892b0; font-size: 14px; }
+
+.stats-grid {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.stat-box {
+    background: #112240;
+    padding: 15px;
+    border-radius: 10px;
+    width: 30%;
+    border: 1px solid #233554;
+}
+.stat-box span { font-size: 24px; font-weight: bold; color: #64ffda; }
+.stat-box p { margin: 5px 0 0 0; font-size: 12px; color: #ccd6f6; text-transform: uppercase; letter-spacing: 1px;}
+
+textarea {
+    width: 95%; height: 200px; padding: 15px;
+    background-color: #020c1b; color: #e6f1ff;
+    border: 1px solid #233554; border-radius: 8px; resize: vertical; font-family: inherit; font-size: 16px;
+}
+textarea:focus { border-color: #64ffda; outline: none; box-shadow: 0 0 10px rgba(100,255,218,0.2);}
+
+/* Minigame Styles */
+.minigame { margin-top: 40px; text-align: center; background: #0a192f; padding: 20px; border-radius: 12px; width: 100%; max-width: 400px; border: 1px solid #233554;}
+#target-word { color: #64ffda; font-size: 32px; letter-spacing: 2px; margin: 10px 0;}
+#type-input { width: 80%; padding: 10px; text-align: center; font-size: 18px; background: #020c1b; color: white; border: 2px solid #233554; border-radius: 8px; outline: none;}
+#type-input:focus { border-color: #64ffda; }
+#typing-result { font-weight: bold; color: #ffb86c; margin-top: 15px; font-size: 18px;}
