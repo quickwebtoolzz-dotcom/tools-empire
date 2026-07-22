@@ -1,0 +1,42 @@
+body {
+    font-family: 'Courier New', Courier, monospace; /* Hacker font */
+    background-color: #050505; /* Pitch Black */
+    color: #00ff00; /* Neon Matrix Green */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    margin: 0;
+}
+.container {
+    background: #0a0a0a;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #00ff00;
+    box-shadow: 0px 0px 20px rgba(0, 255, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+h1 { color: #00ff00; font-size: 24px; margin-top: 0; text-transform: uppercase;}
+p { color: #55aa55; font-size: 14px; }
+
+.password-display {
+    background: #000; border: 1px dashed #00ff00; padding: 15px;
+    margin: 20px 0; font-size: 20px; word-wrap: break-word; letter-spacing: 2px;
+}
+.settings { text-align: left; margin-bottom: 20px; }
+.settings label { display: block; margin: 10px 0; cursor: pointer; color: #aaa;}
+input[type="range"] { width: 100%; cursor: pointer; accent-color: #00ff00;}
+
+button {
+    background-color: #00ff00; color: #000; border: none;
+    padding: 15px; width: 100%; font-size: 16px; font-weight: bold;
+    border-radius: 5px; cursor: pointer; transition: 0.3s; text-transform: uppercase;
+}
+button:hover { background-color: #fff; box-shadow: 0 0 15px #00ff00; }
+
+/* Minigame Styles */
+.minigame { margin-top: 40px; text-align: center; background: #0a0a0a; padding: 15px; border-radius: 10px; border: 1px solid #333;}
+canvas { background: #000; border: 2px solid #00ff00; border-radius: 5px; cursor: none; }
+#score-board { font-size: 20px; font-weight:
