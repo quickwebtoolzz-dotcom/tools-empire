@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Gradient Generator & Background Maker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="glass-panel">
+        <h1>🎨 Gradient Studio</h1>
+        <p>Pick your colors and angle. The background updates live!</p>
+        
+        <div class="controls">
+            <div class="color-pickers">
+                <input type="color" id="color1" value="#ff0080" oninput="generateGradient()">
+                <input type="color" id="color2" value="#ff8c00" oninput="generateGradient()">
+            </div>
+            
+            <label>Angle: <span id="angle-val">90</span>°</label>
+            <input type="range" id="angle" min="0" max="360" value="90" oninput="generateGradient()">
+        </div>
+
+        <div class="output-box">
+            <p id="css-code">background: linear-gradient(90deg, #ff0080, #ff8c00);</p>
+        </div>
+
+        <button onclick="copyCSS()">Copy CSS Code</button>
+        <button class="random-btn" onclick="randomGradient()">✨ Surprise Me</button>
+        
+        <p id="success-msg">Copied to clipboard!</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
