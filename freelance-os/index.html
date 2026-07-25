@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Freelance Invoice Generator & Rate Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="header">
+            <h1>💼 Freelance Financial OS</h1>
+            <p>Calculate your hourly rate and generate professional invoices instantly.</p>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('rate-calc')">Hourly Rate Calculator</button>
+            <button class="tab-btn" onclick="switchTab('invoice-maker')">Invoice Generator</button>
+        </div>
+
+        <!-- FEATURE 1: RATE CALCULATOR -->
+        <div id="rate-calc" class="tab-content active-content">
+            <h2>What should you charge?</h2>
+            <div class="input-group">
+                <label>Monthly Personal Expenses ($)</label>
+                <input type="number" id="expenses" placeholder="e.g. 2000">
+            </div>
+            <div class="input-group">
+                <label>Monthly Business Costs ($)</label>
+                <input type="number" id="biz-costs" placeholder="e.g. 300">
+            </div>
+            <div class="input-group">
+                <label>Desired Monthly Savings ($)</label>
+                <input type="number" id="savings" placeholder="e.g. 500">
+            </div>
+            <div class="input-group">
+                <label>Hours you want to work per week</label>
+                <input type="number" id="hours" placeholder="e.g. 30">
+            </div>
+            <button class="action-btn" onclick="calculateRate()">Calculate Minimum Rate</button>
+            
+            <div class="result-box" id="rate-result" style="display: none;">
+                <p>To survive and hit your goals, your minimum hourly rate must be:</p>
+                <h3 id="final-rate">$0.00 / hr</h3>
+                <p class="small-text">*Includes an estimated 20% tax buffer.</p>
+            </div>
+        </div>
+
+        <!-- FEATURE 2: INVOICE GENERATOR -->
+        <div id="invoice-maker" class="tab-content">
+            <h2>Create Quick Invoice</h2>
+            <div class="input-group">
+                <label>Your Name / Company Name</label>
+                <input type="text" id="my-name" placeholder="John Doe Designs">
+            </div>
+            <div class="input-group">
+                <label>Client's Name</label>
+                <input type="text" id="client-name" placeholder="Acme Corp">
+            </div>
+            <div class="input-group">
+                <label>Service Provided</label>
+                <input type="text" id="service" placeholder="Website Redesign">
+            </div>
+            <div class="input-group">
+                <label>Total Amount ($)</label>
+                <input type="number" id="amount" placeholder="1500">
+            </div>
+            <button class="action-btn" onclick="generateInvoice()">Generate & Save PDF</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
