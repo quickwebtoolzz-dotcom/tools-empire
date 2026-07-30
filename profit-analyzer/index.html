@@ -11,22 +11,33 @@
         <div class="header">
             <h1>📊 Executive Profit Analyzer</h1>
             <p>Calculate your Margins, ROI, and Break-Even point instantly.</p>
+            
+            <!-- NEW CURRENCY SELECTOR -->
+            <div style="margin-top: 15px;">
+                <label style="display: inline; color: #00d084;">Currency: </label>
+                <select id="currency" style="padding: 5px; background: #1a1f24; color: white; border: 1px solid #393e46; border-radius: 4px; outline: none;">
+                    <option value="$">USD ($)</option>
+                    <option value="₹">INR (₹)</option>
+                    <option value="€">EUR (€)</option>
+                    <option value="£">GBP (£)</option>
+                </select>
+            </div>
         </div>
 
         <div class="grid-layout">
             <!-- MODULE 1: PROFIT MARGIN -->
             <div class="module">
                 <h2>1. Profit Margin</h2>
-                <label>Cost to Produce/Buy ($)</label>
+                <label>Cost to Produce/Buy</label>
                 <input type="number" id="cost" placeholder="e.g. 25">
                 
-                <label>Selling Price ($)</label>
+                <label>Selling Price</label>
                 <input type="number" id="price" placeholder="e.g. 100">
                 
                 <button onclick="calcMargin()">Calculate Margin</button>
                 
                 <div class="result-box">
-                    <p>Gross Profit: <span id="gross-profit" class="money">$0.00</span></p>
+                    <p>Gross Profit: <span id="gross-profit" class="money">0.00</span></p>
                     <p>Profit Margin: <span id="margin-percent" class="highlight">0%</span></p>
                 </div>
             </div>
@@ -34,10 +45,10 @@
             <!-- MODULE 2: MARKETING ROI -->
             <div class="module">
                 <h2>2. Marketing ROI</h2>
-                <label>Total Ad Spend ($)</label>
+                <label>Total Ad Spend</label>
                 <input type="number" id="ad-spend" placeholder="e.g. 500">
                 
-                <label>Revenue from Ads ($)</label>
+                <label>Revenue from Ads</label>
                 <input type="number" id="ad-rev" placeholder="e.g. 2000">
                 
                 <button onclick="calcROI()">Calculate ROI</button>
@@ -53,12 +64,12 @@
             <h2>3. Break-Even Point</h2>
             <div class="inline-inputs">
                 <div>
-                    <label>Fixed Business Costs ($)</label>
-                    <input type="number" id="fixed-costs" placeholder="e.g. 1000 (Rent, Software)">
+                    <label>Fixed Business Costs</label>
+                    <input type="number" id="fixed-costs" placeholder="e.g. 1000">
                 </div>
                 <div>
-                    <label>Profit per Sale ($)</label>
-                    <input type="number" id="profit-per-sale" placeholder="e.g. 75 (From above)">
+                    <label>Profit per Sale</label>
+                    <input type="number" id="profit-per-sale" placeholder="e.g. 75">
                 </div>
             </div>
             <button onclick="calcBreakEven()">Calculate Break-Even</button>
@@ -66,7 +77,6 @@
                 <p>You need to sell <span id="breakeven-units" class="highlight">0</span> units to break even.</p>
             </div>
         </div>
-
     </div>
 
     <script src="script.js"></script>
