@@ -2,6 +2,7 @@
 function calcMargin() {
     const cost = parseFloat(document.getElementById('cost').value);
     const price = parseFloat(document.getElementById('price').value);
+    const currency = document.getElementById('currency').value; // Get selected currency
 
     if (isNaN(cost) || isNaN(price) || price === 0) {
         alert("Please enter valid numbers.");
@@ -11,10 +12,10 @@ function calcMargin() {
     const grossProfit = price - cost;
     const marginPercent = (grossProfit / price) * 100;
 
-    document.getElementById('gross-profit').innerText = `$${grossProfit.toFixed(2)}`;
+    // Add the currency symbol dynamically!
+    document.getElementById('gross-profit').innerText = `${currency}${grossProfit.toFixed(2)}`;
     document.getElementById('margin-percent').innerText = `${marginPercent.toFixed(2)}%`;
     
-    // Auto-fill the break-even profit box to save the user time!
     document.getElementById('profit-per-sale').value = grossProfit.toFixed(2);
 }
 
@@ -52,6 +53,5 @@ function calcBreakEven() {
     }
 
     const unitsNeeded = Math.ceil(fixed / profitPerSale);
-
     document.getElementById('breakeven-units').innerText = unitsNeeded.toLocaleString();
 }
