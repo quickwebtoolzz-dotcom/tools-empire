@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Essay Optimizer & Readability Grader</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="header">
+            <h1>🎓 Academic Essay Optimizer</h1>
+            <p>Grade your readability, fix formatting, and analyze your text instantly.</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-box">
+                <span id="grade-level">0</span>
+                <p>Reading Grade Level</p>
+            </div>
+            <div class="stat-box">
+                <span id="word-count">0</span>
+                <p>Total Words</p>
+            </div>
+            <div class="stat-box">
+                <span id="sentence-count">0</span>
+                <p>Sentences</p>
+            </div>
+        </div>
+
+        <textarea id="text-input" placeholder="Paste your essay here to begin analysis..." oninput="analyzeEssay()"></textarea>
+
+        <div class="action-buttons">
+            <button class="btn-primary" onclick="cleanFormatting()">✨ Auto-Clean Formatting</button>
+            <button class="btn-secondary" onclick="copyText()">📋 Copy Fixed Text</button>
+        </div>
+        
+        <p id="feedback-msg">Paste text to see your score.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
