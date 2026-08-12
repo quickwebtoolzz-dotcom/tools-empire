@@ -1,0 +1,64 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #0d1117; /* GitHub Dark Mode Background */
+    color: #c9d1d9;
+    display: flex;
+    justify-content: center;
+    padding: 40px 10px;
+    margin: 0;
+}
+
+.dashboard {
+    background: #161b22;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #30363d;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    max-width: 1000px;
+    width: 100%;
+}
+
+.header { text-align: center; margin-bottom: 20px; border-bottom: 1px solid #30363d; padding-bottom: 20px;}
+.header h1 { color: #58a6ff; font-size: 26px; margin: 0 0 10px 0; }
+.header p { color: #8b949e; font-size: 14px; margin: 0; }
+
+.editor-container {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+
+/* On laptops, it puts the boxes side-by-side. On mobile, it stacks them perfectly! */
+@media (min-width: 768px) {
+    .editor-container { flex-direction: row; }
+    .editor-box { flex: 1; }
+    .controls { display: flex; flex-direction: column; justify-content: center; gap: 10px; }
+}
+
+.editor-box { display: flex; flex-direction: column; width: 100%; }
+label { font-weight: bold; color: #58a6ff; margin-bottom: 10px; font-size: 14px; text-transform: uppercase;}
+
+textarea {
+    width: 90%; height: 250px; padding: 15px;
+    background-color: #0d1117; color: #7ee787; /* Neon Green Text */
+    border: 1px solid #30363d; border-radius: 6px; resize: vertical; 
+    font-family: 'Courier New', Courier, monospace; font-size: 14px;
+}
+textarea:focus { border-color: #58a6ff; outline: none; box-shadow: 0 0 10px rgba(88, 166, 255, 0.2);}
+
+.controls { display: flex; gap: 10px; margin: 15px 0; }
+
+button {
+    padding: 12px 20px; font-size: 14px; font-weight: bold;
+    border-radius: 6px; cursor: pointer; transition: 0.2s; font-family: inherit; border: none;
+}
+.btn-format { background: #238636; color: white; width: 100%;}
+.btn-format:hover { background: #2ea043; }
+
+.btn-clear { background: #da3633; color: white; width: 100%;}
+.btn-clear:hover { background: #f85149; }
+
+.btn-copy { background: #1f6feb; color: white; margin-top: 10px; width: 100%;}
+.btn-copy:hover { background: #388bfd; }
+
+#status-msg { text-align: center; font-weight: bold; margin-top: 20px; padding: 10px; border-radius: 6px; background: #0d1117; border: 1px solid #30363d;}
