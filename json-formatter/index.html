@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free JSON Formatter & Validator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="header">
+            <h1>⚙️ JSON Formatter & Validator</h1>
+            <p>Clean, format, and validate messy JSON data instantly.</p>
+        </div>
+
+        <div class="editor-container">
+            <div class="editor-box">
+                <label>Input (Messy JSON)</label>
+                <textarea id="input-json" placeholder='Paste your raw JSON here... e.g. {"name":"John", "age":30}'></textarea>
+            </div>
+            
+            <div class="controls">
+                <button class="btn-format" onclick="formatJSON()">Format & Validate ➔</button>
+                <button class="btn-clear" onclick="clearFields()">Clear</button>
+            </div>
+
+            <div class="editor-box">
+                <label>Output (Clean JSON)</label>
+                <textarea id="output-json" readonly placeholder="Formatted JSON will appear here..."></textarea>
+                <button class="btn-copy" onclick="copyJSON()">📋 Copy Output</button>
+            </div>
+        </div>
+        
+        <p id="status-msg">Ready.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
